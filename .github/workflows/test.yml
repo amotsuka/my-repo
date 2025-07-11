@@ -1,5 +1,5 @@
 # ワークフロー名 ( 全て小文字に変換し、スペースはハイフンへ置換する )
-name: Test
+name: Go_Test
 # イベント
 on:
   pull_request:
