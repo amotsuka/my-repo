@@ -20,4 +20,4 @@ jobs:
     steps:
       # シェルコマンドの実行
       # 入力パラメーターの参照
-      - run: echo "{{ inputs.greeting }}"
+      - run: echo "${{ inputs.greeting }}"
