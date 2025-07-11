@@ -1,0 +1,19 @@
+# ワークフロー名 ( 全て小文字に変換し、スペースはハイフンへ置換する )
+name: Test
+# イベント
+on:
+  pull_request:
+    paths: ["go/**/*.go"]
+# ジョブの定義
+jobs:
+  # ジョブ ID
+  test:
+    # ランナー ( Ubuntu で実行 )
+    runs-on: ubuntu-latest
+    # ステップの定義
+    steps:
+      - uses: actions/checkout@4
+      - uses: actions/setup-go@v5
+      with:
+        go-version: '1.22'
+      - run: go test go/excellent/*.go
